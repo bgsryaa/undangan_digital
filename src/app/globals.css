@@ -1,0 +1,323 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================
+   ELEGANT WARM PALETTE
+   ---------------------------------------------------------
+   Ivory       #FAF5EC   background utama
+   Cream       #F3EAD8   surface lembut
+   Sand        #E8DCC4   border halus
+   Espresso    #2E1F14   teks utama
+   Cocoa       #5A4632   teks sekunder
+   Gold        #B8893A   aksen utama
+   GoldLight   #D9B36A   aksen hover/glow
+   Forest      #24302A   section gelap
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #FAF5EC;
+  color: #2E1F14;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #B8893A;
+  color: #FAF5EC;
+}
+
+/* Thin elegant scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F3EAD8;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #D9B36A, #B8893A);
+  border-radius: 999px;
+  border: 2px solid #F3EAD8;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8893A;
+}
+
+.section-container {
+  width: min(100%, 480px);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .section-container {
+    width: min(100%, 640px);
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-container {
+    width: min(100%, 760px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-container {
+    width: min(100%, 1100px);
+  }
+}
+
+.gold-divider-line {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #B8893A, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================================================
+   PREMIUM JAVANESE COVER / 2.5D ATMOSPHERE
+   ========================================================= */
+.jv-cover {
+  isolation: isolate;
+  background: #182219;
+}
+
+.jv-cover-sky {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(233, 205, 138, 0.30), transparent 26%),
+    linear-gradient(180deg, #6B5B44 0%, #4A463A 32%, #2A382C 70%, #17231A 100%);
+}
+
+.jv-cover-glow {
+  position: absolute;
+  left: 50%;
+  top: 13%;
+  width: 42vw;
+  height: 42vw;
+  min-width: 260px;
+  min-height: 260px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(232, 199, 122, 0.22), rgba(232, 199, 122, 0) 68%);
+  filter: blur(5px);
+}
+
+.jv-cover-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 38%, rgba(10, 14, 10, 0.52) 100%);
+}
+
+.jv-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 11;
+  opacity: 0.13;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.03) 0,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  mix-blend-mode: soft-light;
+}
+
+@media (max-width: 640px) {
+  .jv-cover-glow {
+    width: 90vw;
+    height: 90vw;
+    top: 12%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jv-cover-sky,
+  .jv-cover-glow {
+    animation: none !important;
+  }
+}
+
+/* =========================================================
+   JAVANESE GARDEN LANDING SYSTEM
+   ========================================================= */
+:root {
+  --jv-green: #24302A;
+  --jv-forest: #18241D;
+  --jv-gold: #B8893A;
+  --jv-gold-light: #D9B36A;
+  --jv-cream: #FAF5EC;
+  --jv-espresso: #2E1F14;
+  --jv-cocoa: #5A4632;
+}
+
+.jv-garden-grain {
+  opacity: 0.16;
+  background-image:
+    radial-gradient(rgba(184, 137, 58, 0.22) 0.7px, transparent 0.7px),
+    radial-gradient(rgba(36, 48, 42, 0.12) 0.7px, transparent 0.7px);
+  background-size: 19px 19px, 31px 31px;
+  background-position: 0 0, 9px 13px;
+  mix-blend-mode: multiply;
+}
+
+.jv-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.jv-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 0%, rgba(184, 137, 58, 0.10), transparent 34%);
+}
+
+/* ---------------------------------------------------------
+   BACKGROUND SECTION — LEMBUT, HANGAT, TIDAK MENABRAK TEKS
+   --------------------------------------------------------- */
+
+/* Ivory — terang, netral */
+.jv-paper {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.75), transparent 40%),
+    linear-gradient(180deg, #FAF5EC 0%, #F3EAD8 100%);
+}
+
+/* Forest — gelap, elegan, teks otomatis terang */
+.jv-forest {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(217, 179, 106, 0.16), transparent 30%),
+    linear-gradient(180deg, #2A382E 0%, #1E2A22 48%, #17231A 100%);
+  color: #FAF5EC;
+}
+.jv-forest .jv-section-title { color: #D9B36A; }
+.jv-forest h1, .jv-forest h2, .jv-forest h3, .jv-forest h4 { color: #FAF5EC; }
+.jv-forest p, .jv-forest span, .jv-forest li { color: rgba(250, 245, 236, 0.82); }
+
+/* ---------------------------------------------------------
+   CARD — KACA LEMBUT DENGAN BORDER EMAS
+   --------------------------------------------------------- */
+.jv-card {
+  background: rgba(250, 245, 236, 0.78);
+  border: 1px solid rgba(184, 137, 58, 0.24);
+  box-shadow:
+    0 1px 2px rgba(46, 31, 20, 0.04),
+    0 20px 60px rgba(46, 31, 20, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #2E1F14;
+}
+
+.jv-card-dark {
+  background: rgba(30, 43, 35, 0.74);
+  border: 1px solid rgba(217, 179, 106, 0.24);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.20);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #FAF5EC;
+}
+.jv-card-dark h1, .jv-card-dark h2, .jv-card-dark h3, .jv-card-dark h4 { color: #FAF5EC; }
+.jv-card-dark p, .jv-card-dark span, .jv-card-dark li { color: rgba(250, 245, 236, 0.82); }
+
+/* ---------------------------------------------------------
+   PHOTO FRAME — DOUBLE BORDER ELEGAN
+   --------------------------------------------------------- */
+.jv-photo-frame {
+  position: relative;
+  isolation: isolate;
+}
+.jv-photo-frame::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border: 1px solid rgba(184, 137, 58, 0.42);
+  border-radius: inherit;
+  transform: rotate(2deg);
+  z-index: -1;
+}
+.jv-photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* ---------------------------------------------------------
+   TYPOGRAPHY HELPERS
+   --------------------------------------------------------- */
+.jv-section-title {
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: #B8893A;
+}
+
+/* ---------------------------------------------------------
+   ANIMASI HALUS
+   --------------------------------------------------------- */
+.jv-botanical-orbit {
+  animation: jvOrbit 18s linear infinite;
+}
+@keyframes jvOrbit {
+  from { transform: rotate(0); }
+  to   { transform: rotate(360deg); }
+}
+
+.jv-float-slow {
+  animation: jvFloat 7s ease-in-out infinite;
+}
+@keyframes jvFloat {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50%      { transform: translateY(-10px) rotate(1deg); }
+}
+
+.jv-shimmer {
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.22) 48%,
+    transparent 65%
+  );
+  background-size: 220% 100%;
+  animation: jvShimmer 5s linear infinite;
+}
+@keyframes jvShimmer {
+  to { background-position: -220% 0; }
+}
+
+@media (max-width: 640px) {
+  .jv-section-title { letter-spacing: 0.18em; }
+  .jv-card { backdrop-filter: blur(8px); }
+  .jv-card-dark { backdrop-filter: blur(10px); }
+}
