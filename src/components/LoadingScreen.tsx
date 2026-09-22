@@ -146,7 +146,7 @@ export function LoadingScreen({ show }: { show: boolean }) {
               transition={{ delay: 1.1, duration: 0.8 }}
               className="mt-5 text-[11px] tracking-[0.4em] text-gold-light/60 uppercase"
             >
-              {weddingData.date}
+              {weddingData.weddingDateDisplay}
             </motion.p>
 
             {/* Loading dots */}
