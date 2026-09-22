@@ -18,9 +18,19 @@ export function MusicPlayer({ shouldPlay }: Props) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    if (shouldPlay && audioRef.current) {
-      audioRef.current.volume = 0.5;
-      audioRef.current.play().then(() => setIsPlaying(true)).catch(() => setIsPlaying(false));
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    audio.volume = 0.5;
+
+    // Some browsers require user interaction before audio plays. We attempt to play
+    // when `shouldPlay` is true (loading or opened). If it fails, we silently wait
+    // for the user to press the floating button to start playback.
+    if (shouldPlay) {
+      const p = audio.play();
+      if (p && typeof p.then === "function") {
+        p.then(() => setIsPlaying(true)).catch(() => setIsPlaying(false));
+      }
     }
   }, [shouldPlay]);
 
@@ -38,7 +48,7 @@ export function MusicPlayer({ shouldPlay }: Props) {
   return (
     <>
       {/* Jika file /music/wedding.mp3 belum tersedia, elemen audio tidak akan menimbulkan error di UI. */}
-      <audio ref={audioRef} src={weddingData.music.src} loop preload="none" />
+      <audio ref={audioRef} src={weddingData.music.src} loop preload="auto" playsInline />
       <motion.button
         initial={{ opacity: 0, scale: 0.7 }}
         animate={{ opacity: 1, scale: 1 }}

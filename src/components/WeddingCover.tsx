@@ -31,10 +31,10 @@ export function WeddingCover({
       <BatikPattern opacity={0.08} />
 
       {/* Vignette + Glow Emas */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_36%,rgba(228,199,122,.13),transparent_25%),linear-gradient(to_bottom,rgba(23,20,15,.05),rgba(20,25,18,.55)_72%,rgba(17,28,20,.96))]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_36%,rgba(228,199,122,.15),transparent_28%),linear-gradient(to_bottom,rgba(23,20,15,.05),rgba(20,25,18,.55)_72%,rgba(17,28,20,.96))]" />
       <div className="jv-cover-vignette" />
 
-      {/* === Partikel Debu Emas Melayang === */}
+      {/* === Partikel Debu Emas === */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
         {[
           { top: "14%", left: "18%", size: 2, delay: 0.2, dur: 7.5 },
@@ -71,7 +71,7 @@ export function WeddingCover({
         initial={{ opacity: 0, y: -18 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute left-5 right-5 top-5 z-20 flex items-center justify-between
+        className="absolute left-4 right-4 top-4 z-20 flex items-center justify-between
                    sm:left-8 sm:right-8 sm:top-8"
       >
         <motion.div
@@ -80,7 +80,7 @@ export function WeddingCover({
           transition={{ duration: 1.0, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
           className="h-px flex-1 origin-right bg-gradient-to-r from-transparent to-gold/60"
         />
-        <span className="mx-4 text-[10px] uppercase tracking-[0.45em] text-gold-light/80">
+        <span className="mx-3 text-[9px] uppercase tracking-[0.4em] text-gold-light/85 sm:mx-4 sm:text-[10px] sm:tracking-[0.45em]">
           Javanese Wedding
         </span>
         <motion.div
@@ -93,95 +93,52 @@ export function WeddingCover({
 
       {/* === Main Copy === */}
       <div className="relative z-20 flex h-full flex-col items-center justify-center
-                      px-6 pb-8 pt-14 text-center sm:px-10">
+                      px-6 pb-10 pt-16 text-center sm:px-10 sm:pb-12 sm:pt-20">
         {/* Label "The Wedding Of" */}
         <motion.p
           initial={{ opacity: 0, letterSpacing: "0.15em", y: -8 }}
-          animate={{ opacity: 1, letterSpacing: "0.42em", y: 0 }}
+          animate={{ opacity: 1, letterSpacing: "0.4em", y: 0 }}
           transition={{ duration: 1.0, delay: 0.35, ease: "easeOut" }}
           className="text-[10px] font-medium uppercase text-gold-light sm:text-xs"
         >
           The Wedding Of
         </motion.p>
 
-        {/* === Gunungan dengan Glow Pulse === */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.7, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mt-5 w-24 sm:mt-7 sm:w-28"
-        >
-          {/* Glow pulse di belakang */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: [0.35, 0.85, 0.35], scale: [1, 1.25, 1] }}
-            transition={{ duration: 5.0, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
-            className="absolute inset-0 rounded-full bg-gold/20 blur-2xl"
-          />
-          <div className="relative mx-auto h-28 w-24 sm:h-32 sm:w-28">
-            <svg
-              viewBox="0 0 220 260"
-              className="h-full w-full drop-shadow-[0_0_15px_rgba(228,199,122,.35)]"
-            >
-              <path
-                d="M110 8 C118 40 96 55 130 78 C160 98 150 120 178 132 C200 141 212 158 214 176 V250 H6 V176 C8 158 20 141 42 132 C70 120 60 98 90 78 C124 55 102 40 110 8Z"
-                fill="rgba(31,22,14,.32)"
-                stroke="#e4c77a"
-                strokeWidth="2"
-              />
-              <path
-                d="M110 22 C114 48 102 58 128 83 C150 103 143 122 169 140"
-                stroke="#c6952f"
-                strokeWidth="1.3"
-                fill="none"
-              />
-              <path
-                d="M110 22 C106 48 118 58 92 83 C70 103 77 122 51 140"
-                stroke="#c6952f"
-                strokeWidth="1.3"
-                fill="none"
-              />
-              <path
-                d="M110 48 C91 88 127 93 110 132 C93 171 126 186 110 225"
-                stroke="#e4c77a"
-                strokeWidth="1"
-                fill="none"
-                opacity=".65"
-              />
-              <path
-                d="M55 199 Q110 168 165 199"
-                stroke="#e4c77a"
-                strokeWidth="1.3"
-                fill="none"
-                opacity=".55"
-              />
-              <circle cx="110" cy="65" r="4" fill="#e4c77a" />
-            </svg>
-          </div>
-        </motion.div>
-
         {/* === Nama Pasangan === */}
         <motion.h1
           initial={{ opacity: 0, y: 24, scale: 0.96 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1.1, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display mt-4 text-5xl leading-[0.9] text-[#f3dfae]
-                     drop-shadow-[0_4px_24px_rgba(0,0,0,.45)]
-                     sm:mt-5 sm:text-7xl md:text-8xl"
+          transition={{ duration: 1.1, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          className="font-display mt-5 text-[3.25rem] leading-[0.95] text-[#f3dfae]
+                     drop-shadow-[0_6px_28px_rgba(0,0,0,.5)]
+                     sm:mt-6 sm:text-7xl md:text-8xl"
         >
-          {weddingData.groom.nickname}{" "}
-          <span className="font-script text-4xl text-gold-light sm:text-6xl md:text-7xl">
+          <span className="block sm:inline">{weddingData.groom.nickname}</span>
+          <span className="mx-3 inline-block font-script text-4xl text-gold-light sm:mx-4 sm:text-6xl md:text-7xl">
             &amp;
-          </span>{" "}
-          {weddingData.bride.nickname}
+          </span>
+          <span className="block sm:inline">{weddingData.bride.nickname}</span>
         </motion.h1>
+
+        {/* === Divider Emas === */}
+        <motion.div
+          initial={{ scaleX: 0, opacity: 0 }}
+          animate={{ scaleX: 1, opacity: 1 }}
+          transition={{ duration: 1.2, delay: 0.95, ease: [0.22, 1, 0.36, 1] }}
+          className="relative mt-6 h-px w-32 origin-center sm:mt-7 sm:w-44"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold/70 to-transparent" />
+          <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+                           w-1 h-1 rounded-full bg-gold-light
+                           shadow-[0_0_10px_2px_rgba(217,179,106,0.9)]" />
+        </motion.div>
 
         {/* === Tanggal === */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 1.1, ease: "easeOut" }}
-          className="mt-5 text-xs tracking-[0.42em] text-ivory/80 sm:text-sm"
+          className="mt-5 text-[11px] tracking-[0.4em] text-ivory/85 sm:mt-6 sm:text-sm sm:tracking-[0.42em]"
         >
           {dateParts.join(" • ")}
         </motion.p>
@@ -191,12 +148,12 @@ export function WeddingCover({
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 1.35, ease: "easeOut" }}
-          className="mt-7 sm:mt-9"
+          className="mt-10 sm:mt-12"
         >
-          <p className="text-[9px] uppercase tracking-[0.38em] text-gold-light/80">
+          <p className="text-[9px] uppercase tracking-[0.38em] text-gold-light/85">
             Kepada Yth.
           </p>
-          <p className="mt-1 font-display text-xl text-ivory sm:text-2xl">
+          <p className="mt-1.5 font-display text-2xl text-ivory drop-shadow-[0_2px_12px_rgba(0,0,0,.5)] sm:text-3xl">
             {guestName ?? "Bapak/Ibu/Saudara/i"}
           </p>
           <motion.div
@@ -216,16 +173,15 @@ export function WeddingCover({
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.97 }}
           onClick={onOpen}
-          className="jv-cover-button group relative mt-8 inline-flex min-h-12 items-center gap-3
+          className="jv-cover-button group relative mt-10 inline-flex min-h-12 items-center gap-3
                      overflow-hidden rounded-full border border-gold/80
-                     bg-[#3b2a18]/70 px-8 py-3
+                     bg-[#3b2a18]/75 px-8 py-3.5
                      text-[10px] font-medium uppercase tracking-[0.28em] text-gold-light
-                     shadow-[0_10px_40px_rgba(0,0,0,.28)]
+                     shadow-[0_10px_40px_rgba(0,0,0,.35),0_0_0_1px_rgba(217,179,106,.15)_inset]
                      backdrop-blur-sm transition-all duration-500
-                     hover:bg-gold hover:text-brown-dark
-                     sm:mt-10 sm:px-10"
+                     hover:bg-gold hover:text-brown-dark hover:shadow-[0_15px_50px_rgba(184,137,58,.5)]
+                     sm:mt-12 sm:px-10 sm:py-4"
         >
-          {/* Shimmer effect */}
           <motion.span
             initial={{ x: "-120%" }}
             animate={{ x: "220%" }}
@@ -253,9 +209,9 @@ export function WeddingCover({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.2, duration: 0.9 }}
-        className="absolute bottom-4 left-0 right-0 z-20 text-center
-                   text-[8px] uppercase tracking-[0.45em] text-ivory/40
-                   sm:bottom-6"
+        className="absolute bottom-5 left-0 right-0 z-20 text-center
+                   text-[8px] uppercase tracking-[0.42em] text-ivory/50
+                   sm:bottom-6 sm:tracking-[0.45em]"
       >
         With love &amp; gratitude
       </motion.p>

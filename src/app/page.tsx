@@ -64,6 +64,9 @@ export default function Home() {
     <>
       <LoadingScreen show={isLoading} />
 
+      {/* Mount MusicPlayer early so it can attempt playback during loading */}
+      <MusicPlayer shouldPlay={isLoading || isOpened} />
+
       <AnimatePresence>
         {!isLoading && !isOpened && (
           <WeddingCover guestName={guestName} onOpen={handleOpen} />
@@ -87,7 +90,8 @@ export default function Home() {
           <DigitalGift />
           <Footer />
 
-          <MusicPlayer shouldPlay={isOpened} />
+          {/* Attempt to start playback during the loading screen as well. */}
+          
 
           {/* === Tombol WhatsApp === */}
           <motion.a

@@ -119,7 +119,8 @@ export const weddingData = {
   ] as BankAccount[],
 
   music: {
-    src: "/music/wedding.mp3",
+    // Public assets are served from the site root. Use "/music/..." not "public/music/..."
+    src: "/music/ssstik.io_1790059608919.mp3.mpeg",
     title: "Wedding Song",
   },
 
