@@ -26,13 +26,6 @@ export type BankAccount = {
   logoInitial: string;
 };
 
-export type Wish = {
-  id: string;
-  name: string;
-  attendance: "hadir" | "tidak_hadir" | "ragu";
-  message: string;
-  createdAt: string;
-};
 
 export const weddingData = {
   seo: {
