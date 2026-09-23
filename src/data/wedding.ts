@@ -39,7 +39,7 @@ export const weddingData = {
     nickname: "Yasin",
     parents: "Bapak Gutomo (ALM) & Ibu Robingatun",
     order: "Putra pertama",
-    photo: "/images/profil/IMG_6409.JPG.jpeg",
+    photo: "/images/profil/5a.JPG.jpeg",
    
    
   },
@@ -49,7 +49,7 @@ export const weddingData = {
     nickname: "Puji",
     parents: "Bapak Sadimun & Ibu Sinem",
     order: "Putri pertama",
-    photo: "/images/profil/IMG_6408.JPG.jpeg",
+    photo: "/images/profil/5.JPG.jpeg",
     
   },
 
@@ -75,7 +75,7 @@ export const weddingData = {
       id: "akad",
       title: "Akad Nikah",
       date: "03 Oktober 2026",
-      time: "08.00 – 10.00 WIB",
+      time: "08.00 – Selesai",
       place: "Rumah Mempelai Wanita",
       address: "Jl. Mondoroko, Desa Sirapan RT 07/03, Kab Madiun, Jawa Timur",
     },
@@ -83,7 +83,7 @@ export const weddingData = {
       id: "resepsi",
       title: "Resepsi",
       date: "03 Oktober 2026",
-      time: "11.00 – 14.00 WIB",
+      time: "10.00 – Selesai",
       place: "Rumah Mempelai Wanita",
       address: "Jl. Mondoroko, Desa Sirapan RT 07/03, Kab Madiun, Jawa Timur",
     },
@@ -101,7 +101,7 @@ export const weddingData = {
     { id: "1", src: "/images/prewed/2.jpg.jpeg", alt: "Potret prewedding pertama" },
     { id: "2", src: "/images/prewed/4.jpg.jpeg", alt: "Potret prewedding kedua" },
     { id: "3", src: "/images/prewed/5.jpg.jpeg", alt: "Potret prewedding ketiga" },
-    { id: "4", src: "/images/prewed/9.png", alt: "Potret prewedding keempat" },
+    { id: "4", src: "/images/prewed/11.png", alt: "Potret prewedding keempat" },
     { id: "5", src: "/images/prewed/10 (2).png", alt: "Potret prewedding kelima" },
     { id: "6", src: "/images/prewed/12.png", alt: "Potret prewedding keenam" },
   ] as GalleryImage[],

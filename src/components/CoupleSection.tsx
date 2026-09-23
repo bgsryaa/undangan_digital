@@ -28,14 +28,14 @@ function PersonCard({
       transition={{ duration: 0.8, delay }}
       className="jv-card relative rounded-[2rem] p-6 sm:p-8 flex flex-col items-center text-center gap-4 w-full max-w-sm"
     >
-      <div className="jv-photo-frame relative w-44 h-56 rounded-[6rem_6rem_2rem_2rem] overflow-hidden shadow-xl">
+      <div className="jv-photo-frame relative w-44 h-72 rounded-[6rem_6rem_2rem_2rem] overflow-hidden shadow-xl">
         <Image
           src={photo}
           alt={name}
           fill
           sizes="176px"
           className="object-cover"
-          style={{ objectPosition: "center 8%" }}
+          style={{ objectPosition: "center 5%" }}
         />
       </div>
 
