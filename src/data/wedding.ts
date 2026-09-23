@@ -100,7 +100,7 @@ export const weddingData = {
   gallery: [
     { id: "1", src: "/images/prewed/2.jpg.jpeg", alt: "Potret prewedding pertama" },
     { id: "2", src: "/images/prewed/4.jpg.jpeg", alt: "Potret prewedding kedua" },
-    { id: "3", src: "/images/prewed/9.jpg.jpeg", alt: "Potret prewedding ketiga" },
+    { id: "3", src: "/images/prewed/9.png", alt: "Potret prewedding ketiga" },
     { id: "4", src: "/images/prewed/11.jpeg", alt: "Potret prewedding keempat" },
     { id: "5", src: "/images/prewed/10 (2).png", alt: "Potret prewedding kelima" },
     { id: "6", src: "/images/prewed/12.png", alt: "Potret prewedding keenam" },
