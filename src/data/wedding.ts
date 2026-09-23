@@ -39,7 +39,7 @@ export const weddingData = {
     nickname: "Yasin",
     parents: "Bapak Gutomo (ALM) & Ibu Robingatun",
     order: "Putra pertama",
-    photo: "/images/profil/5a.JPG.jpeg",
+    photo: "/images/profil/5a.jpg.jpeg",
    
    
   },
@@ -49,7 +49,7 @@ export const weddingData = {
     nickname: "Puji",
     parents: "Bapak Sadimun & Ibu Sinem",
     order: "Putri pertama",
-    photo: "/images/profil/5.JPG.jpeg",
+    photo: "/images/profil/5.jpg.jpeg",
     
   },
 
@@ -101,7 +101,7 @@ export const weddingData = {
     { id: "1", src: "/images/prewed/2.jpg.jpeg", alt: "Potret prewedding pertama" },
     { id: "2", src: "/images/prewed/4.jpg.jpeg", alt: "Potret prewedding kedua" },
     { id: "3", src: "/images/prewed/5.jpg.jpeg", alt: "Potret prewedding ketiga" },
-    { id: "4", src: "/images/prewed/11.png", alt: "Potret prewedding keempat" },
+    { id: "4", src: "/images/prewed/11.jpeg", alt: "Potret prewedding keempat" },
     { id: "5", src: "/images/prewed/10 (2).png", alt: "Potret prewedding kelima" },
     { id: "6", src: "/images/prewed/12.png", alt: "Potret prewedding keenam" },
   ] as GalleryImage[],
