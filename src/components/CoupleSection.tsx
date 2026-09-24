@@ -35,7 +35,7 @@ function PersonCard({
           fill
           sizes="176px"
           className="object-cover"
-          style={{ objectPosition: "center 5%" }}
+          style={{ objectPosition: "center 8%" }}
         />
       </div>
 

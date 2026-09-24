@@ -39,7 +39,7 @@ export const weddingData = {
     nickname: "Yasin",
     parents: "Bapak Gutomo (ALM) & Ibu Robingatun",
     order: "Putra pertama",
-    photo: "/images/profil/5a.jpg.jpeg",
+    photo: "/images/profil/IMG_6409.JPG.jpeg",
    
    
   },
@@ -49,7 +49,7 @@ export const weddingData = {
     nickname: "Puji",
     parents: "Bapak Sadimun & Ibu Sinem",
     order: "Putri pertama",
-    photo: "/images/profil/5.jpg.jpeg",
+    photo: "/images/profil/IMG_6408.JPG.jpeg",
     
   },
 
